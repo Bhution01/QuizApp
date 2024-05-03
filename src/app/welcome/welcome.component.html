@@ -1,0 +1,25 @@
+<p>welcome workss!</p>
+
+{{welcomeMsg}} <br><br>
+
+<form >
+    <input type="text" name="qno" [(ngModel)]="questio.qno"><br><br>
+    <input type="text" name="qtext" [(ngModel)]="questio.qtext"><br><br>
+    
+    <input type="radio" name="selected" (change)="submitted()" [value]="questio.op1" [(ngModel)]="selected"
+       class="css-checkbox" [(ngModel)]="selectedbtn"  name="radioModel">{{questio.op1}}<br><br>
+    <input type="radio" name="selected" (change)="submitted()" [value]="questio.op2" [(ngModel)]="selected"
+      class="css-checkbox"  [(ngModel)]="selectedbtn"  name="radioModel">{{questio.op2}}<br><br>
+    <input type="radio" name="selected" (change)="submitted()" [value]="questio.op3" [(ngModel)]="selected"
+      class="css-checkbox"  [(ngModel)]="selectedbtn"  name="radioModel">{{questio.op3}}<br><br>
+    <input type="radio" name="selected" (change)="submitted()" [value]="questio.op4" [(ngModel)]="selected"
+       class="css-checkbox" [(ngModel)]="selectedbtn"  name="radioModel">{{questio.op4}}<br><br>
+    
+    <input type="text" name="answer" [value]="questio.answer"><br><br>
+</form>
+
+<input type="button" value="Next" (click)="nextQuestion()">
+
+<input type="button" value="Previous" (click)="previousQue()">
+
+<input type="button" value="End Exam" (click)="endExam()">

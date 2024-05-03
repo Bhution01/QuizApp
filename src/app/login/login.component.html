@@ -1,0 +1,12 @@
+<h1>Login Page</h1>
+
+<!-- {{Loginmsgg}} -->
+<input type="text" name="username" placeholder="Enter Username" [(ngModel)]="user.username"><br><br>
+<input type="password" name="password" placeholder="Enter password" [(ngModel)]="user.password"><br><br>
+<select name="Subject" [(ngModel)]="subject">
+    <option value="Math">Math</option>
+    <option value="Math">Java</option>
+</select>
+
+<input type="button" value="Loginn" (click)="validateUser()">
+<button><a routerLink="/admin">Admin Login</a></button>

@@ -1,0 +1,22 @@
+<p>Your score iss {{score}}</p>
+
+
+<table>
+    <tr>
+        <th>qno</th>
+        <th>qtext</th>
+        <th>answer</th>
+        <th>submitted Answer</th>
+        <th>check</th>
+    </tr>
+    <tr *ngFor="let item of answerr">
+        <td>{{item.qno}}</td>
+        <td>{{item.qtext}}</td>
+        <td [style.background]="getColor(item.answer,item.submitted)">{{item.answer}}</td>
+        <td [style.background]="getColor(item.answer,item.submitted)">{{item.submitted}}</td>
+        <td *ngIf="item.answer==item.submitted" [style.background]="getColor(item.answer,item.submitted)"><span>&#10003;</span></td>
+        <td *ngIf="item.answer!==item.submitted" [style.background]="getColor(item.answer,item.submitted)"><span>&#10060;</span></td>
+    </tr>
+</table>
+
+<a routerLink="/welcome">Give Test Again</a> 

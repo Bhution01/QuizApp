@@ -1,0 +1,8 @@
+<h1>Register Page</h1>
+
+<input type="text" name="username" placeholder="Enter Username" [(ngModel)]="user.username"> {{uniqueUser}}<br><br> 
+<input type="password" name="password" placeholder="Enter password" [(ngModel)]="user.password"><br><br>
+<input type="number" name="mobno" placeholder="Enter mobno" [(ngModel)]="user.mobno"><br><br>
+<input type="email" name="emailid" placeholder="Enter emailid" [(ngModel)]="user.emailid"><br><br>
+<input type="button" value="Registerr" (click)="saveUser()">
+
